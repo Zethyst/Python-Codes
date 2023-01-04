@@ -24,4 +24,13 @@ for i in range(5):
         else:
             print(f"{x+5-i} ",end="")
     print("\n")
-    
+
+print("\n[NEW PATTERN]\n")
+for i in range(4):
+    for j in range(5-i):
+        print("  ",end="")
+    for j in range(i+1,0,-1):
+        print(f"{j} ",end="")
+    for j in range(2,i+2):
+        print(f"{j} ",end="")
+    print("\n")

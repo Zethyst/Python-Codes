@@ -28,5 +28,3 @@ for i in range(6):
         else:
             print("   ",end="")
     print("\n")
-    
-    # https://www.youtube.com/watch?v=IqtRjsJAsK4&ab_channel=Amulya%27sAcademy
