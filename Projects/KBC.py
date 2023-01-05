@@ -1,4 +1,4 @@
-
+#PROGRAMMED BY AKSHAT JAISWAL
 questions = [
     "According to legend, what do vampires drink?\n(a) Blood\n(b) Elixir\n(c) Milk\n(d) Water", "a-Blood",
     "Santa Claus is usually pictured in a suit consisting of which two colors?\n(a) Green & white\n(b) Red & white\n(c) Black & white\n(d) Blue & white", "b-Red & white",
@@ -20,24 +20,32 @@ score = 0
 money = 0
 index = 0
 checkpoint = 0
-
+print("WELCOME TO KAUN BANEGA CROREPATI GAME".center(100))
+print("Rules => \n\t1. [You can answer with either a,b,c,d or the word itself.]\n\t2. [There are 3 checkpoints in the game, if you cross that point, you are assured you will atleast take take amount from the game.]\n\t3. [At any point if you feel like quiting, just press 'q' and you will walk away with whatever you've won.]\n\n")
 for q in range(0, len(questions), 2):
-    print(f"QUESTION {index+1} => "+questions[q])
+    print(
+        f"QUESTION {index+1} for Rs. {prize_money[index]} => \n"+questions[q])
     answer = input("Answer: ").lower()
     answer_bank = questions[q+1].split("-")
+    if (answer == 'q'):
+        break
     if ((answer) == (answer_bank[0].lower())) or (answer == (answer_bank[1].lower())):
         money = prize_money[index]
         print(f"\nSahi Jawaab!\nMoney Won => Rs.{money}\n")
         index += 1
         score += 1
-        if (money == 320000):
+        if (money == 10000):
             checkpoint = 1
             print(
                 "[You have hit checkpoint 1]\n")
-        if (money == 2500000):
+        if (money == 320000):
             checkpoint = 2
             print(
                 "[You have hit checkpoint 2]\n")
+        if (money == 2500000):
+            checkpoint = 3
+            print(
+                "[You have hit checkpoint 3]\n")
         if (money == 10000000):
             print(
                 "[Crorepati Ban gaye aap]\n".upper())
@@ -45,9 +53,13 @@ for q in range(0, len(questions), 2):
         print("\nGalat Jawaab.\n")
         print("Correct Answer: "+answer_bank[1])
         if (checkpoint == 1):
+            money = 10000
+        elif (checkpoint == 2):
             money = 320000
-        if (checkpoint == 2):
+        elif (checkpoint == 3):
             money = 2500000
+        else:
+            money = 0
         break
 
 print("\nYou got", score, "answers right out of", int(len(questions)/2))

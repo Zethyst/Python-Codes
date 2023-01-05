@@ -1,7 +1,6 @@
 import turtle
 wd=turtle.Screen()
 wd.bgcolor("black")
-wd.title("I Love You Harshita")
 t=turtle.Turtle()
 t.speed(1)
 t.shape("turtle")
