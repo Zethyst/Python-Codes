@@ -1,12 +1,12 @@
 s1={2,23,5,6,1,2,2,5,}
 print(s1)
 
-# Sets are unordered collection of data items. They store multiple items in a single variable. Set items are separated by commas and enclosed within curly brackets {}. Sets are unchangeable, meaning you cannot change items of the set once created. Sets do not contain duplicate items.
+# Sets are unordered collection of data items. Sets are mutable They store multiple items in a single variable. Set items are separated by commas and enclosed within curly brackets {}. Sets are unchangeable, meaning you cannot change items of the set once created. Sets do not contain duplicate items.
 
 empty_set={}
-print(type(empty_set))
+print(type(empty_set)) #class dict
 empty_set=set()
-print(type(empty_set))
+print(type(empty_set)) #class set
 
 s2={100,235,765,666}
 # print(s1.union(s2))
@@ -16,7 +16,7 @@ print(s1)
 
 cities = {"Tokyo", "Madrid", "Berlin", "Delhi"}
 cities2 = {"Tokyo", "Seoul", "Kabul", "Madrid"}
-cities3 = cities.union(cities2)
+cities3 = cities.union(cities2) #you can also use | or operator
 print("[Storing in a third variable]")
 print(cities3)
 
@@ -28,7 +28,7 @@ print(cities)
 
 cities = {"Tokyo", "Madrid", "Berlin", "Delhi"}
 cities2 = {"Tokyo", "Seoul", "Kabul", "Madrid"}
-cities3 = cities.intersection(cities2)
+cities3 = cities.intersection(cities2) #you can also use & and operator
 print("[Storing in a third variable]")
 print(cities3)
 
@@ -54,7 +54,7 @@ print(cities)
 
 s1={1,2,5,2,7,8,5,3}
 s2={2,3,4,6,7}
-s3=s1.difference(s2)
+s3=s1.difference(s2) # - operator can also be used
 print(s3)
 
 s1={1,2,5,2,7,8,5,3}
@@ -117,3 +117,19 @@ cities = {"Tokyo", "Madrid", "Berlin", "Delhi"}
 cities.clear()
 print(cities)
 
+s4={18,"18"}
+print(s4)
+
+s5={20,20.0,"20"}
+print(len(s5))
+
+s6={8,7,12,"Harry",[1,2]}
+t=list(s6)
+t[4]=[2,1]
+s6=set(t)
+print(s6)
+
+
+set1 = frozenset([1,2,3,4]) #immutable set
+# set1.add(3) # will give error
+# print(set1[2]) #doesnt support indexing

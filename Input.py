@@ -1,6 +1,8 @@
 # a=input()
-a = input("Enter your name: ")
-print("My Name is:", a)
+
+if __name__ == "__main__":
+    a = input("Enter your name: ")
+    print("My Name is:", a)
 
 x = input("Enter first number: ")
 y = input("Enter second number: ")

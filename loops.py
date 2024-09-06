@@ -12,6 +12,9 @@ for color in colors:
         
 for i in range(5): #printing 1 to 5
     print(i+1)
+    
+print("\n")
+
 for i in range(5 , 15): #for printing 5 to 14 (one less than upper bound)
     print(i)
 
